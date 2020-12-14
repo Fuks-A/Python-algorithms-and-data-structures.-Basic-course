@@ -3,7 +3,6 @@
 import math
 import timeit
 
-
 def sieve_without_eratosthenes(i):
 # Функция поиска i-го простого числа, без использования алгоритма «Решето Эратосфена»
 
@@ -20,7 +19,6 @@ def sieve_without_eratosthenes(i):
         number += 1
     return lst_prime[-1]
 
-
 def sieve_eratosthenes(i):
 # Функция поиска i-го простого числа, используя алгоритм «Решето Эратосфена»
 
@@ -36,7 +34,6 @@ def sieve_eratosthenes(i):
             break
     return lst_prime[i - 1]
 
-
 def prime_counting_function(i):
 # Функция возвращает верхнюю границу отрезка на котором лежат i-e количество простых чисел. Функция основана на теореме о
 # распределении простых чисел, она утверждает, что функция распределения простых чисел. Количество простых чисел на отрезке
@@ -48,7 +45,6 @@ def prime_counting_function(i):
         number_of_primes = number / math.log(number)
         number += 1
     return number
-
 
 NUMBER_EXECUTIONS = 1
 TEST_VALUE = 1000
@@ -63,7 +59,6 @@ time2 = timeit.timeit(f'sieve_eratosthenes({TEST_VALUE})',
 
 print(f'Программа без использования алгоритма «Решето Эратосфена» быстрее \
 программы с использованием алгоритма «Решето Эратосфена» в \
-{round(time2 / time1, 2)} раз'
-      )
+{round(time2 / time1, 2)} раз')
 
 
